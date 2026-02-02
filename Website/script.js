@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="user-info">
                 <h3>${review.name}</h3>
                 <div class="stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
                 <div class="review-date">
                   <i class="fas fa-calendar-alt"></i>
@@ -1024,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="content">
               <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
               <h3>${item.name}</h3>
               <p>${item.description}</p>
