@@ -1280,11 +1280,12 @@ document.addEventListener('DOMContentLoaded', () => {
 const menuData = [
   { id: "menu-1", name: "Pudding Balls Coklat", price: 10000, image: "menu-1.jpg", description: "Pudding coklat lembut dengan isian lumer dan rasa manis yang bikin nagih.", category: "speciality" },
   { id: "menu-2", name: "Pudding Balls Mangga", price: 10000, image: "menu-2.jpg", description: "Pudding creamy berpadu rasa mangga segar, manis, dan menyegarkan.", category: "speciality" },
-  { id: "menu-3", name: "CreamChesse Pudding", price: 12000, image: "menu-3.jpg", description: "Creamy risotto with wild mushrooms and parmesan cheese.", category: "speciality" },
-  { id: "menu-10", name: "Dimsum Original", price: 11000, image: "menu-10.jpg", description: "Tender chicken in a creamy, spiced tomato and butter sauce.", category: "extra" },
-  { id: "menu-11", name: "Dimsum Mentai", price: 12000, image: "menu-11.jpg", description: "Indian cottage cheese cubes in a smooth, creamy spinach gravy.", category: "extra" },
-  { id: "menu-12", name: "Dimsum Mentai Spicy", price: 13000, image: "menu-12.jpg", description: "Spicy chickpea curry served with fluffy, deep-fried bread.", category: "extra" },
-  { id: "menu-13", name: "Dimsum Mentai Chese", price: 14000, image: "menu-13.jpg", description: "Crispy rice crepe filled with a savory spiced potato mixture.", category: "extra" },
+  { id: "menu-3", name: "CreamChesse Pudding", price: 12000, image: "menu-3.jpg", description: "Lumer di mulut dengan rasa cream cheese yang lembut dan nagih.", category: "speciality" },
+ { id: "menu-10", name: "Dimsum Original", price: 11000, image: "menu-10.jpg", description: "Dimsum ayam lembut dengan cita rasa gurih alami, dikukus sempurna dari bahan pilihan.", category: "extra" },
+  { id: "menu-11", name: "Dimsum Mentai", price: 12000, image: "menu-11.jpg", description: "Dimsum juicy dengan saus mentai creamy gurih-manis yang lumer di setiap gigitan.", category: "extra" },
+  { id: "menu-12", name: "Dimsum Mentai Spicy", price: 13000, image: "menu-12.jpg", description: "Dimsum lembut berpadu saus mentai pedas yang nendang dan bikin ketagihan.", category: "extra" },
+  { id: "menu-13", name: "Dimsum Mentai Cheese", price: 14000, image: "menu-13.jpg", description: "Dimsum hangat dengan saus mentai creamy dan keju leleh yang gurih maksimal.", category: "extra" },
+
 ];
 
 const reviewData = [
