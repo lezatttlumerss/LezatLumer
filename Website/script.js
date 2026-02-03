@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     // =========================
-    // PAYMENT MODAL MODULE (NEW)
+    // PAYMENT MODAL MODULE
     // =========================
     paymentModal: {
       selectedPayment: '',
@@ -1115,7 +1115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     // =========================
-    // CART MODULE - UPDATED
+    // CART MODULE
     // =========================
     cart: {
       items: [],
@@ -1281,11 +1281,21 @@ const menuData = [
   { id: "menu-1", name: "Pudding Balls Coklat", price: 10000, image: "menu-1.jpg", description: "Pudding coklat lembut dengan isian lumer dan rasa manis yang bikin nagih.", category: "speciality" },
   { id: "menu-2", name: "Pudding Balls Mangga", price: 10000, image: "menu-2.jpg", description: "Pudding creamy berpadu rasa mangga segar, manis, dan menyegarkan.", category: "speciality" },
   { id: "menu-3", name: "CreamChesse Pudding", price: 12000, image: "menu-3.jpg", description: "Lumer di mulut dengan rasa cream cheese yang lembut dan nagih.", category: "speciality" },
- { id: "menu-10", name: "Dimsum Original", price: 11000, image: "menu-10.jpg", description: "Dimsum ayam lembut dengan cita rasa gurih alami, dikukus sempurna dari bahan pilihan.", category: "extra" },
+  { id: "menu-10", name: "Dimsum Original", price: 11000, image: "menu-10.jpg", description: "Dimsum ayam lembut dengan cita rasa gurih alami, dikukus sempurna dari bahan pilihan.", category: "extra" },
   { id: "menu-11", name: "Dimsum Mentai", price: 12000, image: "menu-11.jpg", description: "Dimsum juicy dengan saus mentai creamy gurih-manis yang lumer di setiap gigitan.", category: "extra" },
   { id: "menu-12", name: "Dimsum Mentai Spicy", price: 13000, image: "menu-12.jpg", description: "Dimsum lembut berpadu saus mentai pedas yang nendang dan bikin ketagihan.", category: "extra" },
   { id: "menu-13", name: "Dimsum Mentai Cheese", price: 14000, image: "menu-13.jpg", description: "Dimsum hangat dengan saus mentai creamy dan keju leleh yang gurih maksimal.", category: "extra" },
-
+  
+  // LOK-LOK MENU
+  { id: "loklok-1", name: "Lok-Lok Sosis", price: 2000, image: "loklok-sosis.jpg", description: "Sosis empuk dan gurih yang dipanggang sempurna dengan bumbu khas lok-lok.", category: "loklok" },
+  { id: "loklok-2", name: "Lok-Lok Cikua Mini", price: 2000, image: "loklok-cikua.jpg", description: "Cikua mini kenyal dengan tekstur lembut dan rasa seafood yang autentik.", category: "loklok" },
+  { id: "loklok-3", name: "Lok-Lok Fishrolle", price: 2000, image: "loklok-fishrolle.jpg", description: "Fishrolle premium dengan isian ikan berkualitas, kenyal dan lezat.", category: "loklok" },
+  { id: "loklok-4", name: "Lok-Lok Sosis Jumbo", price: 5000, image: "loklok-sosis-jumbo.jpg", description: "Sosis jumbo ukuran besar dengan rasa yang lebih nendang dan porsi puas.", category: "loklok" },
+  { id: "loklok-5", name: "Lok-Lok Dumpling", price: 3000, image: "loklok-dumpling.jpg", description: "Dumpling lembut berisi daging pilihan dengan bumbu yang meresap sempurna.", category: "loklok" },
+  { id: "loklok-6", name: "Lok-Lok Bakso", price: 2000, image: "loklok-bakso.jpg", description: "Bakso kenyal dengan tekstur yang pas dan rasa daging sapi yang kaya.", category: "loklok" },
+  { id: "loklok-7", name: "Lok-Lok Kornet", price: 2000, image: "loklok-kornet.jpg", description: "Kornet premium dengan cita rasa gurih dan tekstur yang lembut di mulut.", category: "loklok" },
+  { id: "loklok-8", name: "Lok-Lok Scalop", price: 2000, image: "loklok-scalop.jpg", description: "Scalop segar dengan rasa seafood yang autentik dan tekstur yang kenyal.", category: "loklok" },
+  { id: "loklok-9", name: "Lok-Lok Otak-Otak", price: 2000, image: "loklok-otakotak.jpg", description: "Otak-otak spesial dengan bumbu rempah khas yang menggugah selera.", category: "loklok" },
 ];
 
 const reviewData = [
