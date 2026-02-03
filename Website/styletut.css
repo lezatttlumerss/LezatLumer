@@ -359,11 +359,54 @@ header .flex .icons #menu-bars {
   display: inline-block;
 }
 
+/* ========================= */
+/* MENU BOX STYLING - MEWAH & PREMIUM */
+/* ========================= */
 .menu .box-container .box {
   background: var(--primary-bg);
-  border: 0.1rem solid var(--border-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1.5rem var(--shadow-color);
+  border: 0.3rem solid transparent;
+  background-image: 
+    linear-gradient(var(--primary-bg), var(--primary-bg)),
+    linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 1rem 3rem rgba(0, 0, 0, 0.15),
+    0 0.5rem 1rem rgba(0, 0, 0, 0.1),
+    inset 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu .box-container .box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.menu .box-container .box:hover::before {
+  left: 100%;
+}
+
+.menu .box-container .box:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 
+    0 1.5rem 4rem rgba(0, 0, 0, 0.2),
+    0 0.8rem 1.5rem rgba(0, 0, 0, 0.15),
+    inset 0 0 0 0.1rem rgba(255, 255, 255, 0.2);
 }
 
 .menu .box-container .box .image {
@@ -377,65 +420,149 @@ header .flex .icons #menu-bars {
 .menu .box-container .box .image img {
   height: 100%;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   object-fit: cover;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu .box-container .box:hover .image img {
+  transform: scale(1.05);
 }
 
 .menu .box-container .box .content {
-  padding: 2rem;
-  padding-top: 0;
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu .box-container .box .content .stars {
   padding-bottom: 1rem;
+  display: flex;
+  gap: 0.3rem;
 }
 
 .menu .box-container .box .content .stars i {
   font-size: 1.7rem;
-  color: var(--green);
+  color: #ffd700;
+  filter: drop-shadow(0 0 0.3rem rgba(255, 215, 0, 0.5));
 }
 
 .menu .box-container .box .content h3 {
   color: var(--primary-text);
   font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
 }
 
 .menu .box-container .box .content p {
   color: var(--secondary-text);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 0.5rem 0;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 /* ========================= */
-/* LAYOUT BARU - Tombol & Harga Sejajar dengan Ukuran yang Lebih Baik */
+/* LAYOUT MEWAH - Harga di Atas, Tombol di Bawah */
 /* ========================= */
 .menu .box-container .box .content .price-action {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.menu .box-container .box .content .price-action .btn {
-  flex: 0 1 auto;
-  min-width: auto;
-  margin-top: 0;
-  text-align: center;
-  white-space: nowrap;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: auto;
 }
 
 .menu .box-container .box .content .price-action .price {
   color: var(--green);
-  font-size: 2.4rem;
-  font-weight: bold;
-  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
   margin: 0;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, rgba(33, 174, 96, 0.1), rgba(46, 204, 113, 0.15));
+  border-radius: 1rem;
+  border: 0.2rem solid var(--green);
+  box-shadow: 
+    0 0.5rem 1.5rem rgba(33, 174, 96, 0.2),
+    inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.1rem;
+}
+
+.menu .box-container .box .content .price-action .price::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.menu .box-container .box .content .price-action .btn {
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+  padding: 1.4rem 2rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 
+    0 0.8rem 2rem rgba(102, 126, 234, 0.4),
+    inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.menu .box-container .box .content .price-action .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.menu .box-container .box .content .price-action .btn:hover::before {
+  left: 100%;
+}
+
+.menu .box-container .box .content .price-action .btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 
+    0 1.2rem 2.5rem rgba(102, 126, 234, 0.5),
+    inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.menu .box-container .box .content .price-action .btn:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 0.5rem 1rem rgba(102, 126, 234, 0.3),
+    inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.3);
 }
 
 .menu .load-more-container {
@@ -475,15 +602,14 @@ header .flex .icons #menu-bars {
 }
 
 /* Footer Box */
-/* Styling khusus untuk jam buka - UKURAN LEBIH BESAR */
 .footer-box .open-hours li {
   margin-bottom: 1.2rem;
-  font-size: 2rem; /* Lebih besar */
+  font-size: 2rem;
 }
 
 .footer-box .open-hours li span {
   color: #ddd;
-  font-size: 2rem; /* Sama dengan li */
+  font-size: 2rem;
   text-transform: none;
   line-height: 1.8;
 }
@@ -1189,7 +1315,7 @@ header .flex .icons #menu-bars {
 }
 
 /* ========================= */
-/* UPDATED CART ITEM ACTIONS - TOMBOL - + DAN IKON SAMPAH */
+/* CART ITEM ACTIONS */
 /* ========================= */
 .cart-item-actions {
   display: flex;
@@ -1284,6 +1410,22 @@ header .flex .icons #menu-bars {
 .cart-footer .btn {
   width: 100%;
   text-align: center;
+}
+
+/* ========================= */
+/* MAP CONTAINER */
+/* ========================= */
+.map-container {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.map-iframe {
+  width: 100%;
+  height: 25rem;
+  border: none;
 }
 
 /* ========================= */
@@ -1395,26 +1537,24 @@ header .flex .icons #menu-bars {
   }
 }
 
-
-
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
   
-  /* Responsive untuk tombol dan harga di mobile */
+  /* Menu Box Responsive */
   .menu .box-container .box .content .price-action {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .menu .box-container .box .content .price-action .btn {
-    width: 100%;
+    gap: 1.2rem;
   }
   
   .menu .box-container .box .content .price-action .price {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .menu .box-container .box .content .price-action .btn {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
   }
   
   .variant-modal-body {
